@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Thruster-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Levels/Game_Over.gd" type="Script" id=2]
+[ext_resource path="res://Assets/UI.tres" type="Theme" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
@@ -24,8 +25,11 @@ margin_bottom = 642.0
 color = Color( 0.203922, 0.227451, 0.25098, 1 )
 
 [node name="Label" type="Label" parent="."]
-margin_right = 1024.0
-margin_bottom = 246.0
+margin_left = 1.0
+margin_top = 43.0
+margin_right = 1025.0
+margin_bottom = 289.0
+theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 1 )
 text = "Congratulations! 
 You win!"
@@ -39,11 +43,9 @@ margin_right = 612.0
 margin_bottom = 340.0
 focus_neighbour_bottom = NodePath("../Quit")
 focus_next = NodePath("../Quit")
+theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 2 )
 text = "Play Again?"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Quit" type="Button" parent="."]
 margin_left = 412.0
@@ -52,6 +54,7 @@ margin_right = 612.0
 margin_bottom = 400.0
 focus_neighbour_top = NodePath("../Play_Again")
 focus_previous = NodePath("../Play_Again")
+theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 2 )
 text = "Quit"
 

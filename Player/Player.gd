@@ -87,10 +87,7 @@ func attack():
 		var target = $Attack.get_collider()
 		if target.has_method("damage"):
 			target.damage()
-	if $Attack_low.is_colliding():
-		var target = $Attack_low.get_collider()
-		if target.has_method("damage"):
-			target.damage()
+
 
 func die():
 	queue_free()
@@ -98,3 +95,8 @@ func die():
 func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == "Attacking":
 		SM.set_state("Idle")
+
+
+func _on_Area2D_body_entered(body):
+	if body.name == "Coins":
+		body.get_coin(global_position)
