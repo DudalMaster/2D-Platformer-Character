@@ -1613,6 +1613,7 @@ polygon = PoolVector2Array( 12, -48.7, 23, -35.7, 23, -32.4, 25, -27.9, 25, 27.1
 
 [node name="Camera" parent="." instance=ExtResource( 5 )]
 process_mode = 0
+limit_top = -500
 
 [node name="Back" type="TileMap" parent="."]
 tile_set = SubResource( 16 )
@@ -1626,13 +1627,14 @@ script = ExtResource( 2 )
 [node name="Backup_Camera" type="Camera2D" parent="Player_Container"]
 position = Vector2( 222, 190 )
 limit_left = 0
+limit_top = -10000
 limit_right = 3760
 limit_bottom = 6000
 
 [node name="Enemy_Container" type="Node2D" parent="."]
 
 [node name="Golem" parent="Enemy_Container" instance=ExtResource( 8 )]
-position = Vector2( 2969, 302 )
+position = Vector2( 2539, 315 )
 
 [node name="Platform" type="TileMap" parent="."]
 tile_set = SubResource( 16 )

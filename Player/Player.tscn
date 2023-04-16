@@ -189,7 +189,7 @@ region = Rect2( 100, 111, 50, 37 )
 [sub_resource type="SpriteFrames" id=21]
 animations = [ {
 "frames": [ SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ) ],
-"loop": false,
+"loop": true,
 "name": "Attack",
 "speed": 8.0
 }, {
@@ -244,7 +244,7 @@ position = Vector2( 0, 7 )
 scale = Vector2( 1.5, 1.5 )
 shape = SubResource( 16 )
 
-[node name="Attack" type="RayCast2D" parent="."]
+[node name="Attacking" type="RayCast2D" parent="."]
 enabled = true
 cast_to = Vector2( 30, 0 )
 
@@ -296,11 +296,11 @@ script = ExtResource( 3 )
 [node name="Jumping" type="Node" parent="StateMachine"]
 script = ExtResource( 2 )
 
-[node name="Moving_and_Jumping" type="Node" parent="StateMachine"]
-script = ExtResource( 8 )
-
 [node name="Falling" type="Node" parent="StateMachine"]
 script = ExtResource( 7 )
+
+[node name="Moving_and_Jumping" type="Node" parent="StateMachine"]
+script = ExtResource( 8 )
 
 [node name="Coyote" type="Node" parent="StateMachine"]
 script = ExtResource( 5 )

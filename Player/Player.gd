@@ -83,7 +83,7 @@ func set_wall_raycasts(is_enabled):
 	$Wall/Right.enabled = is_enabled
 
 func attack():
-	if $Attack.is_colliding():
+	if $Attack.is_colliding():      #this is a problem
 		var target = $Attack.get_collider()
 		if target.has_method("damage"):
 			target.damage()

@@ -8,7 +8,7 @@ func _ready():
 
 func start():
 	player.set_animation("Attacking")
-	player.get_node("AnimatedSprite").offset.y = 7
+	player.get_node("AnimatedSprite").offset.y = 0
 	$Timer.start()
 
 func end():
