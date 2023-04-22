@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://Assets/portal_start.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player_Container.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Assets/generic_platformer_tiles (1).png" type="Texture" id=7]
 [ext_resource path="res://icon.png" type="Texture" id=8]
 [ext_resource path="res://Assets/coin.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Menu_2023-04-19_20_24_52.wav" type="AudioStream" id=10]
 
 [sub_resource type="TileSet" id=1]
 0/name = "generic_platformer_tiles (1).png 0"
@@ -2765,5 +2766,8 @@ tile_data = PoolIntArray( 327681, 11, 0, 458750, 8, 0, 458751, 8, 0, 393216, 8, 
 tile_set = SubResource( 67 )
 format = 1
 tile_data = PoolIntArray( 589855, 0, 0 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
 
 [connection signal="body_entered" from="Exit_to_3" to="Exit_to_3" method="_on_Exit_body_entered"]
